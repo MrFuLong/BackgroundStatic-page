@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>layout 后台大布局 - Layui</title>
+  <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<style>
+    #colcse li a:hover{background:#009688;color:#fff;}
+</style>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo" >layui 后台布局</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="">控制台</a></li>
+      <li class="layui-nav-item"><a href="">商品管理</a></li>
+      <li class="layui-nav-item"><a href="">用户</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          贤心
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">退了</a></li>
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;">所有商品</a>
+          <dl class="layui-nav-child">
+            <dd>
+                <a data-url="About" data-id="1" data-title="列表一" href="#" class="site-demo-active"    data-type="ltabAdd">列表一</a>
+            </dd>
+            <dd>
+                <a data-url="Info"  data-id="2" data-title="列表二" href="#" class="site-demo-active"    data-type="ltabAdd">列表二</a>
+            </dd>
+            <dd>
+                <a data-url="Info1" data-id="3" data-title="列表三" href="#" class="site-demo-active"    data-type="ltabAdd">列表三</a>
+            </dd>
+            <dd>
+                <a data-url="Info2" data-id="4" data-title="列表四" href="#" class="site-demo-active" data-type="ltabAdd">列表四</a>
+            </dd>
+            <dd>
+              <a data-url="Info3" data-id="5" data-title="列表5" href="#" class="site-demo-active"    data-type="ltabAdd">列表5</a>
+          </dd>
+          <dd>
+              <a data-url="Info4"  data-id="6" data-title="列表6" href="#" class="site-demo-active"    data-type="ltabAdd">列表6</a>
+          </dd>
+          <dd>
+              <a data-url="Info5" data-id="7" data-title="列表7" href="#" class="site-demo-active"    data-type="ltabAdd">列表7</a>
+          </dd>
+          <dd>
+              <a data-url="Info6" data-id="8" data-title="列表8" href="#" class="site-demo-active" data-type="ltabAdd">列表8</a>
+          </dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item ">
+          <a href="javascript:;">解决方案</a>
+          <dl class="layui-nav-child">
+            <dd>
+              <a data-url="About" data-id="9" data-title="列表一" href="#" class="site-demo-active"    data-type="ltabAdd">列表一</a>
+          </dd>
+          <dd>
+              <a data-url="Info"  data-id="10" data-title="列表二" href="#" class="site-demo-active"    data-type="ltabAdd">列表二</a>
+          </dd>
+          <dd>
+              <a data-url="Info1" data-id="11" data-title="列表三" href="#" class="site-demo-active"    data-type="ltabAdd">列表三</a>
+          </dd>
+          <dd>
+              <a data-url="Info2" data-id="13" data-title="列表四" href="#" class="site-demo-active" data-type="ltabAdd">列表四</a>
+          </dd>
+          <dd>
+            <a data-url="Info3" data-id="17" data-title="列表5" href="#" class="site-demo-active"    data-type="ltabAdd">列表5</a>
+        </dd>
+        <dd>
+            <a data-url="Info4"  data-id="14" data-title="列表6" href="#" class="site-demo-active"    data-type="ltabAdd">列表6</a>
+        </dd>
+        <dd>
+            <a data-url="Info5" data-id="15" data-title="列表7" href="#" class="site-demo-active"    data-type="ltabAdd">列表7</a>
+        </dd>
+        <dd>
+            <a data-url="Info6" data-id="16" data-title="列表8" href="#" class="site-demo-active" data-type="ltabAdd">列表8</a>
+        </dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">云市场</a></li>
+        <li class="layui-nav-item"><a href="">发布商品</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="layui-body" style="background-color: #FFFCF5;">
+    <!-- 内容主体区域 -->
+    <div>
+ <div id="colcse" class="layui-tab" lay-filter="demo" lay-allowclose="true" >
+                <ul class="layui-tab-title">
+                  <li class="layui-this" lay-id="0">我的工作台
+                  </li>
+                    <!--
+                        描述：存放tab
+                    -->
+                </ul>
+                <!--
+                    描述：tab右键功能
+              
+                <ul class="rightmenu" style=" display: none;position: absolute;background: #6E6C79;font-family: '微软雅黑';">
+                    <li id="yue" style="color: red;cursor:pointer;" data-id="" data-type="closethis">
+                         <a href="#" id="colcse" style="color: white;cursor:pointer;"  data-type="closethis"  > 关闭当前  </a>
+                        </li>
+
+                    <li data-type="closeall">
+                        <a href="#" id="colcse" style="color: white;cursor:pointer;" data-id=""  data-type="closeall"> 关闭所有  </a>
+                    </li>
+
+                    <li data-type="closeothe">
+                        <a href="#" id="colcse" style="color: white;cursor:pointer;" data-id=""  data-type="closeothe"> 关闭其它  </a>
+                    </li>
+                </ul>  -->
+                <div class="layui-tab-content">
+                  <div class="layui-tab-item layui-show">首页内容...
+
+                  </div>
+                </div>
+            </div>
+
+    </div>
+  </div>
+      <div id="test1" data-id = "test" class="layui-panel-window">
+          <input class="layui-table-box" title="9999999" />
+      </div>
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+    ©layui - 底部固定区域
+  </div>
+</div>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script src="layui/pagejs/index.js" charset="utf-8"></script>
+</body>
+</html>
